@@ -43,10 +43,10 @@ This is the **single highest ROI project** for landing Quantitative Researcher (
 | **Market Order** | 205 ns | 312 ns | 4.9M ops/sec |
 
 ### Cache Performance
-L1 Cache Hits: 98.7%
-L2 Cache Hits: 94.2%
-L3 Cache Misses: <5%
-Branch Misprediction: 0.8%
+- L1 Cache Hits: 98.7%
+- L2 Cache Hits: 94.2%
+- L3 Cache Misses: <5%
+- Branch Misprediction: 0.8%
 
 
 ## Quick Start
@@ -65,7 +65,8 @@ google-benchmark
 
 
 ## One-Command Build & Run
-```git clone https://github.com/YOUR_USERNAME/orderbook-hft.git
+``` bash
+git clone https://github.com/YOUR_USERNAME/orderbook-hft.git
 cd orderbook-hft
 chmod +x scripts/demo.sh
 ./scripts/demo.sh
@@ -73,15 +74,21 @@ chmod +x scripts/demo.sh
 
 ## Manual Build 
 ### Using Make (recommended for quick start)
+```bash
 make
 ./orderbook
+```
 
 ### Using CMake (production build)
+```bash
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j
 ./orderbook
+```
 
 ### Windows (WSL2) build
+```bash
 cmake .. -DCMAKE_CXX_COMPILER=g++-11
 make
+```
